@@ -1,0 +1,16 @@
+# Technologies
+
+ - Flask
+ - Frozen-Flask
+ - Jinja2
+ - Bootstrap 4
+
+# TODO
+
+ - Portfolio images maintain aspect ratio of original
+
+ - More padding from the top in portfolio-items
+
+ - Finish adding info from old site
+
+ - Take nicer screenshots
