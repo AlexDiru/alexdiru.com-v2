@@ -1,11 +1,122 @@
-<html>
-	{% include 'libs.html' %}
+{% extends "bspage.html" %}
+  
+{% block scripts %}
+<style>
+	.portfolio-item {
+		cursor: pointer;
+	}
+</style>
+{% endblock %}
 
-	<head>
-		<title>Markdown Snippet</title>
-	</head>
-	{% include 'nav.html' %}
-	<body>
-    	{{ content }}
-	</body>
-</html>
+{% block content %}
+
+<header class="masthead text-center text-white d-flex">
+  <div class="container my-auto">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <h1 class="text-uppercase">
+          <strong>Alexander Spedding</strong><br/>
+          Software Engineer
+        </h1>
+        <hr>
+      </div>
+      <div class="col-lg-8 mx-auto">
+        <p class="text-faded mb-5">Full Stack | Video Games | Machine Learning</p>
+        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#portfolio">Portfolio</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="portfolio">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading">Portfolio</h2>
+        <hr class="my-4">
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+
+    <!-- #TODO: Check if Jinja supports functions/macros -->
+      {% for portfolio_name, portfolio_item in portfolio_items.items() %}
+          {% if portfolio_item.is_main_portfolio_item() %}
+            <div class="col-lg-3 col-md-6 text-center portfolio-item" 
+            	onclick="window.location.href = 'portfolio-item/' + '{{ portfolio_name }}' + '.html'">
+              <div class="service-box mt-5 mx-auto">
+                
+                {% if portfolio_item.images|length == 0 %}
+                    <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
+                {% else %}
+                    <img src="{{ url_for('static', filename=portfolio_item.get_portfolio_grid_image()) }}" width="200px" height="100px"/>
+                {% endif %}
+
+                <h3 class="mb-3">{{ portfolio_name }}</h3>
+                <p class="text-muted mb-0">{{ portfolio_item.shorttext }}</p>
+              </div>
+            </div>
+          {% endif %}
+      {% endfor %}
+
+    </div>
+  </div>
+</section>
+
+<section id="game-jams">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading">Game Jam Entries</h2>
+        <hr class="my-4">
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+
+
+    	<!-- TODO: Check if Jinja supports functions/macros -->
+      {% for portfolio_name, portfolio_item in portfolio_items.items() %}
+          {% if portfolio_item.is_game_jam_entry_item() %}
+            <div class="col-lg-3 col-md-6 text-center portfolio-item"
+            	onclick="window.location.href = 'portfolio-item/' + '{{ portfolio_name }}' + '.html'">
+              <div class="service-box mt-5 mx-auto">
+                
+                {% if portfolio_item.images|length == 0 %}
+                    <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
+                {% else %}
+                    <img src="{{ url_for('static', filename=portfolio_item.get_portfolio_grid_image()) }}" width="200px" height="100px"/>
+                {% endif %}
+
+                <h3 class="mb-3">{{ portfolio_name }}</h3>
+                <p class="text-muted mb-0">{{ portfolio_item.shorttext }}</p>
+              </div>
+            </div>
+          {% endif %}
+      {% endfor %}
+
+    </div>
+  </div>
+</section>
+
+
+<section id="original-site">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+        <h2 class="section-heading">Original Website</h2>
+        <hr class="my-4">
+        <p class="mb-5">Here is the link to the original website since this one is still a work in progress!</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 ml-auto text-center">
+        <p><a href="old_website/index.html">Original Website</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

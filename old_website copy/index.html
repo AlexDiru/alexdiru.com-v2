@@ -1,0 +1,263 @@
+
+ <html>
+ <head>
+         <meta charset="utf-8">
+         <title>Alex Spedding</title>
+         <link rel="stylesheet" href="css/bootstrap.css">
+		 <script src="jquery-3.1.1.min.js"></script>
+ </head>
+ <body>
+		<div class="container">
+			<div class="content">
+				<div id="headerDiv">
+				</div>
+				
+				<div class="row">
+					<div class="span8" style="width:70%;">
+						<!-- Content -->
+					
+						
+						<h1><p style="margin-left:200px;" width="100%">Main Portfolio</p></h1><br/>
+
+						<p align="justify">On this page are projects which I have done in my spare time and since I have designed them from scratch so they are the ones I am most proud of. They are in chronological order from most recent to oldest.</p>
+
+						<div style="float:left;width:100%;"><img style="float:left;margin-top:18px;" src="img/opengl-logo.png" width="64px"/><h2 style="position:relative;margin-left:50px;">KumaEngine <small>Current Project</small></h2></div>
+						
+						<p align="justify">This is a project to combine both a compiler and a game engine in OpenGL. The aim is to allow people to create visual novels similar to the Danganronpa series (which involve both 2D and 3D environments and minigames making it more complex than a standard visual novel).</p>
+						
+						<a href="https://github.com/AlexDiru/danganronpa" class="btn btn-primary" style="margin-bottom:5px;">Source Code</a>
+						
+						<div style="float:left;width:100%;"><img style="float:left;margin-top:13px;" src="img/ue4-logo.png" width="32px"/><h2 style="position:relative;margin-left:50px;">Doom WAD Importer</h2></div>
+						
+						<p align="justify">Import Doom (original) levels into Unreal Engine. Not written much yet... Imports floors and walls and doors so far. </p>
+						
+						<img src="img/doomwadue.jpg" width="100%"/>
+						
+						<div style="float:left;width:100%;"><img style="float:left;margin-top:13px;" src="img/ue4-logo.png" width="32px"/><h2 style="position:relative;margin-left:50px;">Facade</h2></div>
+
+						<p align="justify">A prototype of a turn-based RPG similar to Persona, Pokemon or Final Fantasy. This project started off by me wondering how to implement a turn-based RPG/overworld state system in engines such as Unreal Engine or Unity (see blogposts <a href="http://alexdiru.blogspot.co.uk/2017/04/facade-turn-based-rpg-system-with.html">here</a> and <a href="http://alexdiru.blogspot.co.uk/2017/04/unreal-engine-turn-based-rpg-design-2.html">here</a> with my rambling).</p>
+
+						<iframe src="https://www.youtube.com/embed/BiMoemDqiYs" width="670" height="376" frameborder="0" allowfullscreen></iframe><br/><br/><br/>
+
+						Liked by Unreal Engine Twitter account!<br/>
+
+						<img src="img/LikedByUE.png" width="80%"/><br/><br/>
+
+						<div style="float:left;width:100%;"><img style="float:left;margin-top:13px;" src="img/ue4-logo.png" width="32px"/><h2 style="position:relative;margin-left:50px;">99th Street <small>Released on itch.io</small></h2></div>
+
+							<p align="justify">A prototype of a skating engine, with grinding, wallrides and a lack of skating animations. Made in Unreal Engine 4. Grinding uses splines and the game is fairly fun to play <b>with a controller.</b></p>
+
+
+							<div id="streetHolder" style="display:none">
+
+								<iframe src="https://www.youtube.com/embed/0_wXn7VB8S8" width="670" height="376" frameborder="0" allowfullscreen></iframe><br/><br/>
+								<!--<img src="img/99thstreet01.png"  style="margin-bottom:5px;" width="90%"/>
+								<br/>-->
+							</div>
+
+							<a id="streetHolderButton" href="" onclick="blocking('streetHolder'); return false;" class="btn" style="margin-bottom:5px;">Expand</a>
+							<a href="https://alexdiru.itch.io/99th-street" class="btn btn-primary" style="margin-bottom:5px;">itch.io</a>
+
+						<div style="float:left;width:100%;"><img style="float:left;margin-top:13px;" src="img/ue4-logo.png" width="32px"/><h2 style="position:relative;margin-left:50px;">Untitled Stealth Game <small>On hold</small></h2></div>
+
+
+							<p align="justify">Stealth FPS game intended to be in the same style as <b>the original</b> Thief games. Written in UE4, I was quite proud of implementing noise arrows. The player can fire a noise arrow at any part of the map and it emits a noise, if the enemy is close enough then they will walk towards it. The extremely difficult part was integrating the noise sound with the navigation mesh (the predefined area of the both the AIs can walk on). Since most of the time the arrow will be shot at a wall or a roof of a building where the NPC cannot reach, thus the position the AI would need to investigate would need to be projected to the nearest point on its navigation mesh. It was way harder to implement than explain! And also researching OpenGL and the UE4 source code to work out the lighting algorithm UE uses to compute the amount of light hitting the player (because you need to be able to hide in the shadows!)</p>
+
+
+							<div id="amayaHolder" style="display:none">
+								<p align="justify">Below are some YouTube videos and screenshots of the game, currently I'm not working on it in favour of 99th Street as that seems to be a more unique idea and the AI won't need to be crazily complex.</p>
+
+								<iframe src="https://www.youtube.com/embed/H9KKS5-yW60" width="670" height="376" frameborder="0" allowfullscreen></iframe><br/><br/>
+
+								<img src="img/amaya1.png"  style="margin-bottom:5px;" width="90%"/>
+								<img src="img/amaya2.png"  style="margin-bottom:5px;" width="90%"/>
+								<img src="img/amaya3.png"  style="margin-bottom:5px;" width="90%"/>
+
+								<br/>
+
+								<a href="https://www.youtube.com/watch?v=0XyP-Y9pdD8">Video 1</a><br/>
+								<a href="https://www.youtube.com/watch?v=oHF6U7ljngc">Video 2</a><br/>
+								<a href="https://www.youtube.com/watch?v=H9KKS5-yW60">Video 3</a><br/>
+
+							</div>
+							
+							<a id="amayaHolderButton" href="" onclick="blocking('amayaHolder'); return false;" class="btn" style="margin-bottom:5px;">Expand</a>
+
+						<div style="float:left;width:100%;"><img style="float:left;margin-top:13px;" src="img/libgdx-logo.png" width="32px"/><h2 style="position:relative;margin-left:50px;">Red Leaf <small>Released on Google Play Store and itch.io</small></h2></div>
+						
+							<p align="justify">Although lacking music talent (it's the wrong side of the brain for me) I have loved music for as far as I can remember. After getting an Android phone I found myself getting addicted to the rhythm
+							games similar to Guitar Hero where you tap the notes as they fall down the screen. While I was doing some coursework for University which involved creating games for Android phones, I had the idea to
+							create one of those rhythm games for one of my favourite bands, <a href="http://lost-band.jp/">LOST</a>. Obviously the first hurdle would be to get permission to use the music.</p>
+							
+							<div id="redLeafHolder" style="display:none;">
+								<p align="justify">So when I got this response, I was extremely happy!</p>
+								
+								<img src="img/lostresponse.png"/>
+								
+								<p align="justify">The graphics are either done by the band's staff, but a lot is done by my friend, <a href="http://grantnorris.co.uk/">Grant Norris</a>.A screenshot as the game currently stands:</p>
+								
+								<img src="img/rl01.png"  style="margin-bottom:5px;" width="50%"/>
+								<img src="img/rl02.png"  style="margin-bottom:5px;" width="50%"/>
+								<img src="img/rl03.png"  style="margin-bottom:5px;" width="50%"/>
+							</div>
+							
+							<a id="redLeafHolderButton" href="" onclick="blocking('redLeafHolder'); return false;" class="btn" style="margin-bottom:5px;">Expand</a>
+							<a href="https://play.google.com/store/apps/details?id=com.alexdiru.redleaf" class="btn btn-primary" style="margin-bottom:5px;">Google Play Store</a>
+							<a href="https://alexdiru.itch.io/red-leaf" class="btn btn-primary" style="margin-bottom:5px;">itch.io</a>
+						
+						<div style="float:left;width:100%;"><img style="float:left;margin-top:13px;" src="img/csharp-logo.png" width="32px"/><h2 style="position:relative;margin-left:50px;">Jet Set Reverse <small>Released and Open Source</small></h2></div>
+						
+							<p align="justify">This was an application I developed to allow texture changes in the game Jet Set Radio HD. Jet Set Radio HD was a HD port of a Dreamcast game released in 1999, this means that 
+							all the files used by the HD re-release are Dreamcast files. As far as I know, I am the first person to develop support for texture changes on this game. It involved a lot of trial and error as the
+							game uses its own custom file formats lacking a specification (or even any info about them), also the use of Dreamcast textures is annoying as many tools that still remain on the internet (being that
+							the Dreamcast existed pre-millenium).</p>
+							
+							<div id="jsreverseHolder" style="display:none;">
+								<p align="justify">While developing the program, I made lots and lots of blog posts about hacking into the files:</p>
+								<a href="http://alexdiru.blogspot.co.uk/2013/12/reverse-engineering-jet-set-radio-hd.html">Blog 1</a><br/>
+								<a href="http://alexdiru.blogspot.co.uk/2013/12/reverse-engineering-jet-set-radio-hd_28.html">Blog 2</a><br/>
+								<a href="http://alexdiru.blogspot.co.uk/2013/12/reverse-engineering-jet-set-radio-part-3.html">Blog 3</a><br/>
+								<a href="http://alexdiru.blogspot.co.uk/2013/12/reverse-engineering-jet-set-radio-part-4.html">Blog 4</a><br/>
+								<a href="http://alexdiru.blogspot.co.uk/2013/12/creating-custom-texture-for-gum-in-jet.html">Software Release 1</a><br/>
+								<a href="http://alexdiru.blogspot.co.uk/2013/12/reverse-engineering-jet-set-radio-hd_30.html">Blog 5</a><br/>
+								<a href="http://alexdiru.blogspot.co.uk/2013/12/reverse-engineering-jet-set-radio-hd_6611.html">Blog 6</a><br/>
+								<a href="http://alexdiru.blogspot.co.uk/2013/12/jet-set-reverse-v01131230-gum-beat-mew.html">Software Release 2</a><br/>
+								<a href="http://alexdiru.blogspot.co.uk/2014/01/reverse-engineering-jet-set-radio-hd.html">Blog 7</a><br/>
+								<a href="http://alexdiru.blogspot.co.uk/2014/01/reverse-engineering-jet-set-radio-hd_1.html">Blog 8</a><br/>
+								<a href="http://alexdiru.blogspot.co.uk/2014/01/reverse-engineering-jet-set-radio-hd_6255.html">Blog 9</a><br/>
+								<a href="http://alexdiru.blogspot.co.uk/2014/02/jet-set-reverse-v01140211-release.html">Software Release 3</a><br/><br/>
+						
+								<img src="img/jsr01.png" style="margin-bottom:5px" width="80%"/>
+								<img src="img/jsr02.png" style="margin-bottom:5px" width="80%"/>
+								<img src="img/jsr03.jpg" style="margin-bottom:5px" width="80%"/>
+							</div>
+							
+							<a id="jsreverseHolderButton" href="" onclick="blocking('jsreverseHolder'); return false;" class="btn" style="margin-bottom:5px;">Expand</a>
+							<a href="https://www.dropbox.com/s/vtlswmxgzk7dv07/JetSetReverse.rar" class="btn btn-primary" style="margin-bottom:5px;">Download</a>
+							<a href="https://github.com/AlexDiru/jet-set-reverse" class="btn btn-primary" style="margin-bottom:5px;">Source Code</a>
+							
+						<div style="float:left;width:100%;"><img style="float:left;margin-top:13px;" src="img/slick2d-logo.jpg" width="32px"/><h2 style="position:relative;margin-left:50px;">Electric Rain <small>Open Source</small></h2></div>
+							
+							<p align="justify">Electric Rain was an RPG which I attempted to create using the Slick2D engine from Java. It has a turn based battle system in the vain of the Final Fantasy series, and supports types of attacks/spells such as ones which can have 
+							a single target and others which can have an area of effect and hit multiple targets. Attacks/spells don't neccessarily need to be targetted at enemies, healing spells are in place which can heal your own team. All of the data the game
+							uses are stored in XML files and thus can be easily parsed and amended. The main game is reminescent of Pokemon - a top down view of the world with wild encounters found in grass.</p>
+							
+							<div id="electricRainHolder" style="display:none;">
+								<p align="justify">The game is open source and the source code is available <a href="https://github.com/AlexDiru/electric-rain">here</a>. Below are some screenshots:</p>
+								
+								<img src="img/er1.png" style="margin-bottom:5px;" width="80%"/>
+								
+								<img src="img/er2.png" style="margin-bottom:5px;" width="80%"/>
+							</div>
+							
+							<a id="electricRainHolderButton" href="" onclick="blocking('electricRainHolder'); return false;" class="btn" style="margin-bottom:5px;">Expand</a>
+						
+						<div style="float:left;width:100%;"><img style="float:left;margin-top:25px;" src="img/irrlicht-logo.png" width="32px"/><h2 style="position:relative;margin-left:50px;">Neuron Warfare <small>Open Source</small></h2></div>
+						
+							<p align="justify">Neuron Warfare was an open source game creating in C++ using Irrlicht. Originally I intended the project just to be demo to see if I could implement the A* algorithm. However, it has quickly increased beyond that. 
+							It's beginning to form into a turn based strategy game where you have a party of players who move across a map and must kill the ememies before they kill you.</p>
+						
+							<div id="nwHolder" style="display:none;">
+								<p align="justify">Screenshots:</p>
+								<img src="img/nw01.png"style="margin-bottom:5px;"/>
+								<img src="img/nw02.png"style="margin-bottom:5px;"/>
+							</div>
+						
+							<a id="nwHolderButton" href="" onclick="blocking('nwHolder'); return false;" class="btn" style="margin-bottom:5px;">Expand</a>
+							<a href="https://github.com/AlexDiru/NeuronWarfare" class="btn btn-primary" style="margin-bottom:5px;">Source Code</a>
+							
+						<div style="float:left;width:100%;"><img style="float:left;margin-top:25px;" src="img/darkgdk-logo.png" width="32px"/><h2 style="position:relative;margin-left:50px;">Barricade <small>Released</small></h2></div>
+						
+							<p align="justify">Barricade was a simple puzzle game I made for a competition in 2009. The prize for the winner was that the game's graphics were remade (by David Gervais), and as a awful artist myself that would mean I could have a decent looking
+							game if I won. I had drafted up some not so great looking prototypes. The gameplay was simplistic yet it worked - it involved navigated throughout a map to reach the end, however things were in your way
+							such as boxes, locked 'doors' and spike pits. This game won the competition...</p>
+							
+							<div id="barricadeHolder" style="display:none;">
+								<p align="justify">...However, my game was the only entrant so I had to win! I felt bad for the organiser as lots of people said they would join in but they never did - though not a problem with me as I would finally
+								have a finished game with decent graphics. To make the deadline, even though I knew there were no other entrants I still wanted to finish the game so I pulled a few all-nighters to get it done.</p>
+							
+								<p>The original 'Programmer Graphics' version:</p>
+								
+								<img src="img/barricadeoriginal.jpg" style="margin-bottom:5px"/>
+								
+								<p>The new 'Artist Graphics' version:</p>
+								
+								<img src="img/barricadenew.jpg" style="margin-bottom:5px"/>
+							</div>
+							
+							<a id="barricadeHolderButton" href="" onclick="blocking('barricadeHolder'); return false;" class="btn" style="margin-bottom:5px;">Expand</a>
+							<a href="http://www.mediafire.com/?fq4a1n22n67329a" class="btn btn-primary" style="margin-bottom:5px;">Download</a>
+						
+
+						<div style="float:left;width:100%;"><img style="float:left;margin-top:25px;" src="img/darkgdk-logo.png" width="32px"/><h2 style="position:relative;margin-left:50px;">Jet Set Radio Air <small>Lost in the sands of time ;_;</small></h2></div>
+						
+							<p align="justify">This was the first large scale project I attempted. It was a game based upon the games <a href="https://www.youtube.com/watch?v=emU06UZzaz4">Jet Set Radio</a> (1999) and <a href="https://www.youtube.com/watch?v=nZtW67Xr9AA">Jet Set Radio Future</a> 
+							(2002) (brilliant games which both have a large cult following). It was evident at the time that SEGA wouldn't continue with the franchise (understandable from a business point of view as the games just didn't sell, but not from a gamer point of view) so I thought
+							it would be a good idea (bad idea - way too large a scale of a project) to make a fangame and in the process hopefully not receive a cease and desist letter from SEGA. I really enjoyed programming this, probably my proudest achievement, although looking back it isn't
+							much but to a 15 year old me it was a masterpiece.</p>
+						
+							<div id="jsraHolder" style="display:none;">
+								<p align="justify">Unfortunately this is one of the many projects I have lost the source code. Though 15 year old me would have probably written indecipherable code. The reason I stopped this project was mainly due to the spaghetti code this had become. Whenever I ran
+								the game I would get an exception which I just couldn't find the fix to. I'm not sure if I knew about debugging then - I must have done, because if not bug fixing would have been horrible. But I didn't know what version control was so there was no way I could revert to 
+								a previous build.</p>
+								
+								<p align="justify">Enough nostalgia, time for videos:</p>
+								
+								<a href="https://www.youtube.com/watch?v=WHSH2HgXZ9M">Video 1</a><br/>
+								<a href="https://www.youtube.com/watch?v=UZsbvNxw9WE">Video 2</a><br/>
+								<a href="https://www.youtube.com/watch?v=GQjLLsFdEOo">Video 3</a><br/>
+								<a href="https://www.youtube.com/watch?v=Pn4Idl29wTw">Video 4</a><br/>
+								<a href="https://www.youtube.com/watch?v=ij_5JmTDsiQ">Video 5</a><br/>
+								<a href="https://www.youtube.com/watch?v=bPNH2h1xFn0">Video 6</a><br/>
+								<a href="https://www.youtube.com/watch?v=GtEIAT9naVU">Video 7</a><br/>
+								<a href="https://www.youtube.com/watch?v=DYUmfT9PTDs">Video 8</a><br/>
+								<a href="https://www.youtube.com/watch?v=YEboSNYr0ik">Video 9</a><br/>
+								<a href="https://www.youtube.com/watch?v=CQMN0Igs064">Video 10</a><br/>
+								<a href="https://www.youtube.com/watch?v=cV73EkxdxAw">Video 11</a><br/>
+								<a href="https://www.youtube.com/watch?v=jPoP3navVGE">Video 12</a><br/>
+								<a href="https://www.youtube.com/watch?v=r5zLDYsyd7s">Video 13</a><br/>
+								<a href="https://www.youtube.com/watch?v=eGlSQOn0OUA">Video 14</a><br/>
+								<a href="https://www.youtube.com/watch?v=saw9PTOuMGc">Video 15</a><br/>
+								<a href="https://www.youtube.com/watch?v=EEjPZ84-lIQ">Video 16</a><br/>
+								<a href="https://www.youtube.com/watch?v=mCfzv5qA-qo">Video 17</a><br/>
+								<a href="https://www.youtube.com/watch?v=lDlr_afvJ7U">Video 18</a><br/>
+								<a href="https://www.youtube.com/watch?v=dQAzhXF73K0">Video 19</a><br/>
+								<a href="https://www.youtube.com/watch?v=2UKKCiEc9Ag">Video 20</a><br/>
+								<a href="https://www.youtube.com/watch?v=O56oEPwL5aA">Video 21</a><br/>
+								<a href="https://www.youtube.com/watch?v=rei89rxCmZM">Video 22</a><br/>
+								<a href="https://www.youtube.com/watch?v=vdif7S65IXs">Video 23</a><br/>
+								<a href="https://www.youtube.com/watch?v=b1Gy0ItT8eU">Video 24</a><br/>
+							</div>
+							
+							<a id="jsraHolderButton" href="" onclick="blocking('jsraHolder'); return false;" class="btn" style="margin-bottom:5px;">Expand</a>
+						
+						<!-- End Content -->
+					</div>
+					<div id="navDiv">
+					</div>
+				</div>
+			</div>
+         
+     </div>
+
+    <script>
+		$('#headerDiv').load('header.html');
+		$('#navDiv').load('nav.html');
+
+		function blocking(holderID) {
+			holderID = '#' + holderID;
+			var buttonID = '#' + event.target.id;
+
+			if ($(buttonID).text() == "Expand") {
+				$(holderID).css("display","");
+				$(buttonID).html("Collapse");
+			} else {
+				$(holderID).css("display","none");
+				$(buttonID).html("Expand");
+			}
+
+		}
+	</script>
+
+ </body>
+</html>

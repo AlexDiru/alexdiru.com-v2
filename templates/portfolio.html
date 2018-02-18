@@ -1,0 +1,55 @@
+{% extends "bspage.html" %}
+
+{% block scripts %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='vendor/slick/slick.css') }}"/>
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='vendor/slick/slick-theme.css') }}"/>
+<style>
+	.slick-prev:before,
+	.slick-next:before
+	{
+		color: #000000;
+	}
+	.floater {
+	    float: left;
+	    height: 50%;
+	    width: 100%;
+    	margin-bottom: -50px;
+	}
+</style>
+{% endblock %}
+
+{% block content %}
+
+<section id="portfolio-item" style="padding-top:3rem;">
+	<div class="container">
+		<div class="row">
+			<div class="col-2"></div>
+			<div class="col-8" align="center">
+				<h1>{{ portfolio_item.title }}</h1>
+				<h3>{{ portfolio_item.subtitle }}</h3>
+				<p align="justify">{{ portfolio_item.content|safe }}</p>
+
+				<!-- Carousel -->
+				{% if portfolio_item.images|length > 0 %}
+				<div class="slider single-item">
+					{% for image in portfolio_item.get_images_for_jinja() %}
+				  		<div class="align-middle"><img src="{{url_for('static', filename=image) }}" style="max-width:100%;"/></div>
+				  	{% endfor %}
+				</div>
+				{% endif %}
+
+			</div>
+		</div>
+	</div>
+</section>
+
+{% endblock %}
+
+{% block scriptsbottom %}
+<script type="text/javascript" src="{{url_for('static', filename='vendor/slick/slick.min.js') }}"></script>
+<script>
+	$(function(){
+		$('.single-item').slick();
+	});
+</script>
+{% endblock %}

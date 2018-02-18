@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include 'libs.html' %}
+  {% block scripts %}{% endblock %}
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Alexander Spedding</title>
+
+
+  </head>
+
+  <body id="page-top">
+
+    {% include 'nav.html' %}
+
+    {% block content %}{% endblock %}
+
+  </body>
+
+  {% include 'libs_bottom.html' %}
+  {% block scriptsbottom %}{% endblock %}
+
+</html>

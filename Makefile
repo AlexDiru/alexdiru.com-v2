@@ -1,6 +1,7 @@
 dependencies:
 	pip install flask
 	pip install markdown
+	pip install Frozen-Flask
 
 clean:
 	lsof -ti:5000 | xargs kill

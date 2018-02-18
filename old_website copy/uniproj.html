@@ -1,0 +1,127 @@
+
+ <html>
+ <head>
+         <meta charset="utf-8">
+         <title>Alex Spedding</title>
+         <link rel="stylesheet" href="css/bootstrap.css">
+		 <script src="jquery-3.1.1.min.js"></script>
+ </head>
+ <body>
+		<div class="container">
+			<div class="content">
+				<div id="headerDiv">
+				</div>
+				
+				<div class="row">
+					<div class="span8" style="width:70%;">
+						<!-- Content -->
+					
+						<h1><p style="margin-left:150px;" width="100%">University Projects</p></h1><br/>
+
+
+						<div style="float:left;width:100%;"><img style="float:left;margin-top:13px;" src="img/cpp-logo.png" width="32px"/><h2 style="position:relative;margin-left:50px;">A Hero's Quest <small>Open Source</small></h2></div>
+						
+							<p align="justify">This was my first major programming project at University, the only constraint was to create a maze game. So I made an RPG.</p>
+						
+							<div id="heroHolder" style="display:none;">
+								<p align="justify">Screenshots:</p>
+								<img src="img/hq01.png"style="margin-bottom:5px;"/>
+								<img src="img/hq02.png"style="margin-bottom:5px;"/>
+								<img src="img/hq03.png"style="margin-bottom:5px;"/>
+								<img src="img/hq04.png"style="margin-bottom:5px;"/>
+								<img src="img/hq05.png"style="margin-bottom:5px;"/>
+							</div>
+							<a id="heroHolderButton" href="" onclick="blocking('heroHolder'); return false;" class="btn" style="margin-bottom:5px;">Expand</a>
+							<a href="https://github.com/AlexDiru/AHerosQuest" class="btn btn-primary" style="margin-bottom:5px;">Source Code</a>
+
+						<div style="float:left;width:100%;"><img style="float:left;margin-top:13px;" src="img/java-logo.png" width="32px"/><h2 style="position:relative;margin-left:50px;">Genetic Life Simulator <small>Open Source</small></h2></div>
+							
+							<p align="justify">This was the topic I chose for my Final Year Project. Previously, in second year, for coursework, I had already made a life simulator although that was significantly more basic than
+							this project. This project would use Genetic Programming in order to allow the life forms to start with random behaviour and evolve over generations to adapt to the environment and be able to survive
+							longer. I used the Java library, JGAP, to handle the Genetic Programming side of the project. LibGDX was used to handle the rendering of the simulation world. And Java's Swing API was used to build the
+							GUI for the project.</p>
+
+
+							<a href="https://github.com/AlexDiru/artificial-life-simulator-genetic-algorithm" class="btn btn-primary" style="margin-bottom:5px;">Source Code</a>
+						
+						<div style="float:left;width:100%;"><img style="float:left;margin-top:13px;" src="img/java-logo.png" width="32px"/><h2 style="position:relative;margin-left:50px;">Critical Error <small>Open Source</small></h2></div>
+						
+							<p align="justify">This was the coursework for my Java module in second year the aim of which was to implement a game in the vain of Lunar Lander. Annoyingly I dislike the game Lunar Lander so this coursework would have been way more fun had I been 
+							in the previous year as they asked to implement a version of Breakout. All my game was was the basic Lunar Lander, the only difference was that after each level you earned money which could be used to buy upgrades such as
+							more fuel, additional lives and more money per level completed.</p>
+						
+							<div id="critErrHolder" style="display:none;">
+								<p align="justify">Screenshot:</p>
+								
+								<img src="img/ce01.png" style="margin-bottom:5px;"/>
+							</div>
+							
+							<a id="critErrHolderButton" href="" onclick="blocking('critErrHolder'); return false;" class="btn" style="margin-bottom:5px;">Expand</a>
+
+							<a href="https://github.com/AlexDiru/critical-error" class="btn btn-primary" style="margin-bottom:5px;">Source Code</a>
+						
+						
+						<div style="float:left;width:100%;"><img style="float:left;margin-top:13px;" src="img/java-logo.png" width="32px"/><h2 style="position:relative;margin-left:50px;">Esper Compiler <small>Open Source</small></h2></div>
+						
+						<p align="justify">An assignment in the second year of University for the Compilers module was to create a compiler which is capable of division by zero. An easy way to complete this assignment would be to create a simple calculator. I chose to use 
+						this assignment to create my own (basic) programming language. The programming language I created is titled Esper and takes influence from LISP in that it adopts the prefix notation. The target language it produces is C and when 
+						compiled the C code compiles into a valid program in which division by zero can be handled.</p>
+							
+						<div id="espHolder" style="display:none;">
+							<p align="justify">This compiler (as well as the report I wrote) resulted in a grade of 100% for the coursework, since I had implemented all of the features (albeit basic) of a compiler: Lexical Analysis,
+							Parse Tree Generation, Optimisation and Code Generation. I used the Compiler Generator ANTLR, to help build the lexical analsyer and the parser for the compiler. The parser provided by ANTLR only provided
+							very basic functionality so I had to spend a lot of time getting it to have the functionality I required. The source code for the project is available on my GitHub account here.</p>
+							
+							</div>
+							
+							<a id="espHolderButton" href="" onclick="blocking('espHolder'); return false;" class="btn" style="margin-bottom:5px;">Expand</a>
+							<a href="https://github.com/AlexDiru/esper-compiler-final" class="btn btn-primary" style="margin-bottom:5px;">Source Code</a>
+							
+						<div style="float:left;width:100%;"><img style="float:left;margin-top:13px;" src="img/java-logo.png" width="32px"/><h2 style="position:relative;margin-left:50px;">Artificial Life Simulator <small></small></h2></div>
+						
+							<p align="justify">This project was the first piece of coursework for my Java module in Second Year. It involved using the Swing GUI to create a simulation where artificial life interact with a world.
+							The big downside for this project was having to use Swing due to the fact we weren't allowed to use any GUI builders and therefore had to manually code the GUI, and also rendering the life form's world
+							in Swing meant that they had to be JLabels with images, and thus updating them often (multiple times a second) was very slow.</p>
+							
+							<div id="alsHolder" style="display:none;">
+								<p align="justify">The simulation contained multiple types of life forms, each with different behaviour. There was the herbivore: which ate plants in the map. The carnivore: which ate herbivores. The nestbuilder: which ate plants and was able to build a defensive nest to protect itself from carnivores. And 
+								the ghost which was able to walk through the obstacles. Another highlight of the project was using a clustering algorithm to generate different types of landscape (though this didn't affect the 
+								simulation, only its visual appearance).</p>
+								
+								<p align="justify">This project and its related report gave me a mark of 90%</p>
+								
+								<p align="justify">Screenshots:</p>
+								<img src="img/ls01.png"style="margin-bottom:5px;"/>
+								<img src="img/ls02.png"style="margin-bottom:5px;"/>
+							</div>
+							
+							<a id="alsHolderButton" href="" onclick="blocking('alsHolder'); return false;" class="btn" style="margin-bottom:5px;">Expand</a>
+					</div>
+					<div id="navDiv">
+					</div>
+				</div>
+			</div>
+         
+     </div>
+
+    <script>
+		$('#headerDiv').load('header.html');
+		$('#navDiv').load('nav.html');
+
+		function blocking(holderID) {
+			holderID = '#' + holderID;
+			var buttonID = '#' + event.target.id;
+
+			if ($(buttonID).text() == "Expand") {
+				$(holderID).css("display","");
+				$(buttonID).html("Collapse");
+			} else {
+				$(holderID).css("display","none");
+				$(buttonID).html("Expand");
+			}
+
+		}
+	</script>
+
+ </body>
+</html>

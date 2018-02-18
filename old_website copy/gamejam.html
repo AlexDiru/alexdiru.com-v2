@@ -1,0 +1,122 @@
+
+ <html>
+ <head>
+         <meta charset="utf-8">
+         <title>Alex Spedding</title>
+         <link rel="stylesheet" href="css/bootstrap.css">
+		 <script src="jquery-3.1.1.min.js"></script>
+ </head>
+ <body>
+		<div class="container">
+			<div class="content">
+				<div id="headerDiv">
+				</div>
+				
+				<div class="row">
+					<div class="span8" style="width:70%;">
+						<!-- Content -->
+					
+						<h1><p style="margin-left:150px;" width="100%">Game Jam Entries</p></h1><br/>
+
+
+						<div style="float:left;width:100%;"><img style="float:left;margin-top:13px;" src="img/unity-logo.png" width="32px"/><h2 style="position:relative;margin-left:50px;">How To Build A Planet <small>Released on itch.io</small></h2></div>
+
+						<p align="justify">Game made for Ludum Dare game jam 38, the theme was 'Small World'. You start off on an asteroid and you must place rockets at the edge to thrust it off into space and connecting to other asteroids to increase the size of your planet and gain more resources.</p>
+
+							<div id="planetHolder" style="display:none">
+								<p align="justify">I made this in Unity with two other friends over a weekend: John Roberts (<a href="http://www.twitter.com/Thingus49">@Thingus49</a>) and Timothy Threadgold (<a href="http://www.twitter.com/TimThreadgold">@TimThreadgold</a>), I don't think the resolution scaling works too well - we assumed Unity did everything and then we were too burned out on the Sunday night to fix it.</p>
+
+								<br/>
+								<img src="img/asteroid1.png"  style="margin-bottom:5px;" width="90%"/>
+								<br/>
+							</div>
+
+							<a id="planetHolderButton" href="" onclick="blocking('planetHolder'); return false;" class="btn" style="margin-bottom:5px;">Expand</a>
+							<a href="https://alexdiru.itch.io/how-to-build-a-planet" class="btn btn-primary" style="margin-bottom:5px;">itch.io</a>
+						
+
+						<div style="float:left;width:100%;"><img style="float:left;margin-top:13px;" src="img/unity-logo.png" width="32px"/><h2 style="position:relative;margin-left:50px;">Cabin Commander <small>Released on itch.io</small></h2></div>
+
+							<p align="justify">Game made for Ludum Dare game jam 37, the theme was 'One Room'. You play the role of a commander locked in a cabin on a battlefield. You are able to control your tanks from the commander table in your cabin and can look outside your cabin onto the battlefield, but you can never leave your cabin.</p>
+
+							<div id="cabinHolder" style="display:none">
+								<p align="justify">I made this in Unity with two other friends over a weekend: John Roberts (<a href="http://www.twitter.com/Thingus49">@Thingus49</a>) and Timothy Threadgold (<a href="http://www.twitter.com/TimThreadgold">@TimThreadgold</a>).</p>
+
+								<br/>
+								<img src="img/cabin1.png"  style="margin-bottom:5px;" width="90%"/>
+								<br/>
+							</div>
+
+							<a id="cabinHolderButton" href="" onclick="blocking('cabinHolder'); return false;" class="btn" style="margin-bottom:5px;">Expand</a>
+							<a href="https://alexdiru.itch.io/cabin-commander" class="btn btn-primary" style="margin-bottom:5px;">itch.io</a>
+
+
+						<div style="float:left;width:100%;"><img style="float:left;margin-top:13px;" src="img/ue4-logo.png" width="32px"/><h2 style="position:relative;margin-left:50px;">Omega <small>Released on itch.io</small></h2></div>
+						
+							<p align="justify">Procedurally generated heightmap made for a game jam (PROCJAM 2016), did not implement as much gameplay as I would have liked as building the heightmap had to be done by creating the vertices and winding them manually (rather than edit a landscape heightmap at runtime). Perlin Noise was used for the heightmap.
+							</p>
+
+							<div id="omegaHolder" style="display:none">
+								<img src="img/omega.png"  style="margin-bottom:5px;" width="90%"/>
+								<br/>
+							</div>
+
+							<a id="omegaHolderButton" href="" onclick="blocking('omegaHolder'); return false;" class="btn" style="margin-bottom:5px;">Expand</a>
+							<a href="https://alexdiru.itch.io/omega" class="btn btn-primary" style="margin-bottom:5px;">itch.io</a>
+
+						
+						<div style="float:left;width:100%;"><img style="float:left;margin-top:13px;" src="img/libgdx-logo.png" width="32px"/><h2 style="position:relative;margin-left:50px;">Mare Imbrium <small>Open Source</small></h2></div>
+						
+							<p align="justify">Ludum Dare is a somewhat frequent competition where the aim is to make a game over a weekend in 48 hours. The game is then uploaded to Ludum Dare's website and the games are voted on and a
+							winner is declared. After a while, a game jam branched off where there was no competition, just to make a game in 72 hours. I'm not really a fan of competition and since Ludum Dare is entered in by the likes of
+							famous game developers such as Notch (Minecraft), it seems like it could turn into a popularity contest. I just wanted to see what I could make in 48 hours. Start Friday afternoon/evening, finish Sunday 
+							afternoon/evening. My 'entry' was a game called Mare Imbrium</p>
+							
+							<div id="mareImbriumHolder" style="display:none;">
+								<p align="justify">Mare Imbrium is rogue-like game based on DoomRL (even has some sprites taken from it...) Where you play as a schoolgirl and have to save Mars from killer robots by shooting them - not the most
+								usual combination. This was entered into the 28th Ludum Dare where the theme "You Only Get One", which is quite a vague theme in that you can generally apply it to pretty much any concept. Thus applying it to a
+								rogue-like and it becomes You Only Get One Life - when you die you start from the beginning of the game. There are only three levels, I forwent having procedural map generation because I wanted actual game mechanics
+								and I had a feeling if I went for procedural I wouldn't end up with much of a game.</p>
+								
+								<p align="justify">The first and second levels are pretty easy - make sure to stock up on health! The third level is pretty difficult, a good tactic seems to be to try to get the bigger robots to shoot the smaller
+								'cannon fodder'. The game is very flexible, majority of things (items, enemies, maps, weapons) are read from CSV files so it's very easy to change details on the fly.</p>
+							
+								<p align="justify">Source code is on GitHub. Bit messy due to lack of time!</p>
+								<img src="img/mi01.png"  style="margin-bottom:5px;" width="80%"/>
+								<img src="img/mi02.png"  style="margin-bottom:5px;" width="80%"/>
+							</div>
+							
+							<a id="mareImbriumHolderButton" href="" onclick="blocking('mareImbriumHolder'); return false;" class="btn" style="margin-bottom:5px;">Expand</a>
+							<a href="https://www.dropbox.com/s/c80wevbxew7wbd1/Mare%20Imbrium.zip" class="btn btn-primary" style="margin-bottom:5px;">Download</a>
+							<a href="https://github.com/AlexDiru/mare-imbrium-ld28" class="btn btn-primary" style="margin-bottom:5px;">Source Code</a>
+						
+						<!-- End Content -->
+					</div>
+					<div id="navDiv">
+					</div>
+				</div>
+			</div>
+         
+     </div>
+
+    <script>
+		$('#headerDiv').load('header.html');
+		$('#navDiv').load('nav.html');
+
+		function blocking(holderID) {
+			holderID = '#' + holderID;
+			var buttonID = '#' + event.target.id;
+
+			if ($(buttonID).text() == "Expand") {
+				$(holderID).css("display","");
+				$(buttonID).html("Collapse");
+			} else {
+				$(holderID).css("display","none");
+				$(buttonID).html("Expand");
+			}
+
+		}
+	</script>
+
+ </body>
+</html>

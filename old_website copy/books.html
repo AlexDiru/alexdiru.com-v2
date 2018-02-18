@@ -1,0 +1,102 @@
+
+ <html>
+ <head>
+         <meta charset="utf-8">
+         <title>Alex Spedding</title>
+         <link rel="stylesheet" href="css/bootstrap.css">
+		 <script src="jquery-3.1.1.min.js"></script>
+ </head>
+ <body>
+		<div class="container">
+			<div class="content">
+				<div id="headerDiv">
+				</div>
+				
+				<div class="row">
+					<div class="span8" style="width:70%;">
+						<!-- Content -->
+					
+						
+						<h1><p style="margin-left:200px;" width="100%">Book Wishlist</p></h1><br/>
+
+						<h2>Games Programming</h2>
+
+						<p align="justify">Game AI Pro 3</p>
+						<p align="justify">Game Coding Complete (Fourth Edition)</p>
+						<p align="justify">3D Math Primer for Graphics and Game Development</p>
+						<p align="justify">Game Engine Black Book: Wolfenstein 3D</p>
+						<p align="justify">Game Programming Patterns</p>
+						<p align="justify">Game Engine Architecture</p>
+
+						<h2>Graphics Programming</h2>
+
+						<p align="justify">Real-Time Rendering</p>
+						<p align="justify">Real-Time Shadows</p>
+						<p align="justify">Physically Based Rendering: From Theory to Implementation</p>
+						<p align="justify">GPU Zen 1</p>
+						<p align="justify">GPU Gems 1</p>
+						<p align="justify">GPU Gems 3</p>
+						<p align="justify">Michael Abrash’s Graphics Programming</p>
+						<p align="justify">Visualizing Quaternions</p>
+
+						<h2>Design</h2>
+
+						<p align="justify">Code Complete (Second Edition)</p>
+						<p align="justify">Modern C++ Design: Generic Programming and Design Patterns Applied</p>
+						<p align="justify">Clean Code: A Code of Conduct for Professional Programmers</p>
+						<p align="justify">Clean Code: A Handbook of Agile Software Craftsmanship</p>
+						<p align="justify">Clean Architecture: A Craftsman’s Guide to Software Structure and Design</p>
+
+						<h2>Algorithms/Theory</h2>
+
+						<p align="justify">Algorithms (Fourth Edition)</p>
+						<p align="justify">Compilers: Principles, Tools and Techniques</p>
+						<p align="justify">Computational Geometry: Algorithms and Applications</p>
+						<p align="justify">Hacker’s Delight</p>
+						<p align="justify">The Algorithm Design Manual</p>
+						<p align="justify">Computational Geometry in C</p>
+
+						<h2>C++</h2>
+
+						<p align="justify">Modern Effective C++</p>
+						<p align="justify">The C++ Programming Language (Fourth Edition)</p>
+
+						<h2>C</h2>
+
+						<p align="justify">The C Programming Language</p>
+						<p align="justify">The Standard C Library</p>
+
+						<h2>Other</h2>
+
+						<p align="justify"></p>
+						
+						<!-- End Content -->
+					</div>
+					<div id="navDiv">
+					</div>
+				</div>
+			</div>
+         
+     </div>
+
+    <script>
+		$('#headerDiv').load('header.html');
+		$('#navDiv').load('nav.html');
+
+		function blocking(holderID) {
+			holderID = '#' + holderID;
+			var buttonID = '#' + event.target.id;
+
+			if ($(buttonID).text() == "Expand") {
+				$(holderID).css("display","");
+				$(buttonID).html("Collapse");
+			} else {
+				$(holderID).css("display","none");
+				$(buttonID).html("Expand");
+			}
+
+		}
+	</script>
+
+ </body>
+</html>

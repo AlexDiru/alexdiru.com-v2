@@ -1,0 +1,75 @@
+
+ <html>
+ <head>
+         <meta charset="utf-8">
+         <title>Alex Spedding</title>
+         <link rel="stylesheet" href="css/bootstrap.css">
+		 <script src="jquery-3.1.1.min.js"></script>
+ </head>
+ <body>
+		<div class="container">
+			<div class="content">
+				<div id="headerDiv">
+				</div>
+				
+				<div class="row">
+					<div class="span8" style="width:70%;">
+						<!-- Content -->
+					
+						
+						<h1><p style="margin-left:200px;" width="100%">Teaching</p></h1><br/>
+
+						Just a record of the teaching I've done - it probably won't mean much!
+
+
+						<h2>Lab Practical Assistant (2013 - 2017)</h2>
+
+						<ul>
+						<li>Java (2013, 2014, 2015, 2016, 2017)</li>
+						<li>Data Mining MSc Module (2014, 2015, 2016)</li>
+						<li>Fundamentals of Computing (2016, 2017)</li>
+						<li>Applications of Computer Science (2017)</li>
+						</ul>
+
+						<h2>Coursework Marking (2015 - 2017)</h2>
+						<ul>
+						<li>Java (2015, 2016)</li>
+						<li>Evolutionary Computation (2016)</li>
+						<li>Data Mining -MSc Course- (2016)</li>
+						<li>Data Mining -BSc Course- (2017)</li>
+						</ul>
+
+						<h2>MOOC: Begin Programming (2013 - 2014)</h2>
+
+						<p align="justify">The University ran their first online course titled "Begin programming: build your first mobile game" with 10,000 participants on the first run and over 30,000 on the second run. The course involved teaching the participants how to learn programming from scratch by teaching them how to program a game for Android-based phones using the Android SDK with Java. This position involved helping users with their problems such as errors installing the Android SDK and further explaining them programming principals when they couldn't grasp the concepts from the provided video.</p>
+						
+						<!-- End Content -->
+					</div>
+					<div id="navDiv">
+					</div>
+				</div>
+			</div>
+         
+     </div>
+
+    <script>
+		$('#headerDiv').load('header.html');
+		$('#navDiv').load('nav.html');
+
+		function blocking(holderID) {
+			holderID = '#' + holderID;
+			var buttonID = '#' + event.target.id;
+
+			if ($(buttonID).text() == "Expand") {
+				$(holderID).css("display","");
+				$(buttonID).html("Collapse");
+			} else {
+				$(holderID).css("display","none");
+				$(buttonID).html("Expand");
+			}
+
+		}
+	</script>
+
+ </body>
+</html>

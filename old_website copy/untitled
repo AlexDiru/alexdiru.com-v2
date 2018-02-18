@@ -1,0 +1,12 @@
+
+class Particle {
+private:
+	double Mass;
+	double Radius;
+public:
+	Particle(double, double);
+};
+
+Particle::Particle(double mass, double radius) : Mass{mass}, Radius{radius} {
+	
+}

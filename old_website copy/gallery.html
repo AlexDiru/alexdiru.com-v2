@@ -1,0 +1,66 @@
+
+ <html>
+ <head>
+         <meta charset="utf-8">
+         <title>Alex Spedding</title>
+         <link rel="stylesheet" href="css/bootstrap.css">
+		 <script src="jquery-3.1.1.min.js"></script>
+ </head>
+ <body>
+		<div class="container">
+			<div class="content">
+				<div id="headerDiv">
+				</div>
+				
+				<div class="row">
+					<div class="span8" style="width:70%;">
+						<!-- Content -->
+					
+						
+						<h1><p style="margin-left:200px;" width="100%">GIFs</p></h1><br/>
+
+						<h2>Facade <small>Turn-based RPG</small></h2>
+
+						<p align="justify">This is a gif of the turn-based RPG system I am working on, currently it's in a very early state!</p>
+
+						<img src="https://media.giphy.com/media/3o7bu6e3OZROh0TXVu/giphy.gif" width="460px"/>
+
+
+						<h2>99th Street <small>Platformer (I guess?)</small></h2>
+
+
+						<p align="justify">Demonstrating the wallriding and grinding mechanics</p>
+
+						<img src="https://media.giphy.com/media/3o7bu81SQZ5ZzW720M/giphy.gif" width="460px"/>
+"
+						
+						<!-- End Content -->
+					</div>
+					<div id="navDiv">
+					</div>
+				</div>
+			</div>
+         
+     </div>
+
+    <script>
+		$('#headerDiv').load('header.html');
+		$('#navDiv').load('nav.html');
+
+		function blocking(holderID) {
+			holderID = '#' + holderID;
+			var buttonID = '#' + event.target.id;
+
+			if ($(buttonID).text() == "Expand") {
+				$(holderID).css("display","");
+				$(buttonID).html("Collapse");
+			} else {
+				$(holderID).css("display","none");
+				$(buttonID).html("Expand");
+			}
+
+		}
+	</script>
+
+ </body>
+</html>
