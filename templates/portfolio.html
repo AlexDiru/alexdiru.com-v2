@@ -84,8 +84,6 @@
 <script type="text/javascript" src="{{url_for('static', filename='vendor/slick/slick.min.js') }}"></script>
 <script type="text/javascript" src="{{url_for('static', filename='vendor/slick-lightbox/slick-lightbox.min.js') }}"></script>
 <script>
-	$('.images').slickLightbox();
-
-
+	$('.images').slickLightbox({ useHistoryApi: 'true' });
 </script>
 {% endblock %}
