@@ -1,19 +1,19 @@
 Kuma Engine:
  SubTitle: Current Project
  Logo: OpenGL
- ShortText: Visual Novel Creator in OpenGL.
+ Short Text: Visual Novel Creator in OpenGL.
  Content: "This is a project to combine both a compiler and a game engine in OpenGL. The aim is to allow people to create visual novels similar to the Danganronpa series (which involve both 2D and 3D environments and minigames making it more complex than a standard visual novel)."
 
 Doom WAD Importer:
  Logo: UE4
- ShortText: Import Doom levels into Unreal Engine.
+ Short Text: Import Doom levels into Unreal Engine.
  Content: "Imports floors, walls and doors of Doom levels into Unreal Engine using ear clipping polygon triangulation."
  Images:
   - doomwadue.jpg
 
 Facade:
  Logo: UE4
- ShortText: A turn-based battle system in Unreal Engine.
+ Short Text: A turn-based battle system in Unreal Engine.
  Content: "A prototype of a turn-based RPG similar to Persona, Pokemon or Final Fantasy. This project started off by me wondering how to implement a turn-based RPG/overworld state system in engines such as Unreal Engine or Unity (see blogposts <a href=\"http://alexdiru.blogspot.co.uk/2017/04/facade-turn-based-rpg-system-with.html\">here</a> and <a href=\"http://alexdiru.blogspot.co.uk/2017/04/unreal-engine-turn-based-rpg-design-2.html\">here</a> with my rambling)."
  Videos:
   - "https://youtu.be/BiMoemDqiYs"
@@ -21,7 +21,7 @@ Facade:
 99th Street:
  SubTitle: "Released on itch.io"
  Logo: UE4
- ShortText: Prototype of a skating engine
+ Short Text: Prototype of a skating engine
  Content: "A prototype of a skating engine, with grinding, wallrides and a lack of skating animations. Made in Unreal Engine 4. Grinding uses splines and the game is fairly fun to play with a controller."
  Videos: 
   - "https://youtu.be/0_wXn7VB8S8"
@@ -30,7 +30,7 @@ Facade:
 
 Midnight Sun:
  Logo: UE4
- ShortText: "Stealth game with artificial intelligence."
+ Short Text: "Stealth game with artificial intelligence."
  Content: >
   Stealth FPS game intended to be in the same style as the original Thief games. Written in UE4, I was quite proud of implementing noise arrows. The player can 
   fire a noise arrow at any part of the map and it emits a noise, if the enemy is close enough then they will walk towards it. The extremely difficult part was integrating the noise
@@ -48,7 +48,7 @@ Midnight Sun:
 Red Leaf:
  SubTitle: "Released on Google Play Store and itch.io"
  Logo: LibGDX
- ShortText: Stealth game with artificial intelligence.
+ Short Text: Stealth game with artificial intelligence.
  Content: >
   After getting an Android phone I found myself getting addicted to the rhythm games similar to Guitar Hero where you tap the notes as they fall down the screen. While I was doing 
   some coursework for University which involved creating games for Android phones, I had the idea to create one of those rhythm games for one of my favourite bands, LOST. Obviously 
@@ -65,7 +65,7 @@ Red Leaf:
 Jet Set Reverse:
  SubTitle: "Open Source"
  Logo: CSharp
- ShortText: "A texture modifier for a Dreamcast game."
+ Short Text: "A texture modifier for a Dreamcast game."
  Content: >
   This was an application I developed to allow texture changes in the game Jet Set Radio HD. Jet Set Radio HD was a HD port of a Dreamcast game released in 1999, this means that all 
   the files used by the HD re-release are Dreamcast files. As far as I know, I am the first person to develop support for texture changes on this game. It involved a lot of trial and 
@@ -93,7 +93,7 @@ Jet Set Reverse:
   "Source Code" : "https://github.com/AlexDiru/jet-set-reverse"
 
 Electric Rain:
- ShortText: "A 2D RPG with a battle system."
+ Short Text: "A 2D RPG with a battle system."
  Logo: LibGDX
  Content: >
   Electric Rain was an RPG which I attempted to create using the Slick2D engine from Java. It has a turn based battle system in the vain of the Final Fantasy series, and supports 
@@ -107,7 +107,7 @@ Electric Rain:
   Source Code: "https://github.com/AlexDiru/electric-rain"
 
 Neuron Warfare:
- ShortText: "Strategy shooter in C++ using Irrlicht."
+ Short Text: "Strategy shooter in C++ using Irrlicht."
  Logo: Irrlicht
  Content: > 
   Neuron Warfare was an open source game creating in C++ using Irrlicht. Originally I intended the project just to be demo to see if I could implement the A* algorithm. However, 
@@ -120,7 +120,7 @@ Neuron Warfare:
   Source Code: "https://github.com/AlexDiru/NeuronWarfare"
 
 Barricade:
- ShortText: "A 2.5D puzzle game using DarkGDK."
+ Short Text: "A 2.5D puzzle game using DarkGDK."
  Logo: DarkGDK
  Content: >
   Barricade was a simple puzzle game I made for a competition in 2009. The prize for the winner was that the game's graphics were remade (by David Gervais), and as a awful artist 
@@ -136,7 +136,7 @@ Barricade:
   Download: "http://www.mediafire.com/?fq4a1n22n67329a"
 
 Jet Set Radio Air:
- ShortText: "A skating game using DarkGDK"
+ Short Text: "A skating game using DarkGDK"
  Logo: DarkGDK
  Content: >
   Unfortunately this is one of the many projects I have lost the source code. Though 15 year old me would have probably written indecipherable code. The reason I stopped this project 
@@ -169,14 +169,14 @@ Jet Set Radio Air:
   <a href="https://www.youtube.com/watch?v=b1Gy0ItT8eU">Video 24</a><br/>
 
 rsurfer:
- ShortText: "An R package for MRI data"
+ Short Text: "An R package for MRI data"
  Logo: R
  Links:
   Source Code: "https://github.com/AlexDiru/rsurfer"
 
 How To Build A Planet:
  Portfolio Type: Game Jam
- ShortText: "Ludum Dare 38"
+ Short Text: "Ludum Dare 38"
  Logo: Unity
  Content: >
   Game made for Ludum Dare game jam 38, the theme was 'Small World'. You start off on an asteroid and you must place rockets at the edge to thrust it off into space and connecting to 
@@ -190,8 +190,8 @@ How To Build A Planet:
   "itch.io": "https://alexdiru.itch.io/how-to-build-a-planet"
 
 Cabin Commander:
- PortfolioType: Game Jam
- ShortText: "Ludum Dare 37"
+ Portfolio Type: Game Jam
+ Short Text: "Ludum Dare 37"
  Logo: Unity
  Content: >
   Game made for Ludum Dare game jam 37, the theme was 'One Room'. You play the role of a commander locked in a cabin on a battlefield. You are able to control your tanks from the commander 
