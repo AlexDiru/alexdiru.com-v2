@@ -3,6 +3,7 @@ from flask import Flask
 from flask import render_template
 from flask import Markup
 from typing import Iterable, List, Dict
+from collections import MutableMapping
 
 app = Flask(__name__)
 
@@ -13,6 +14,61 @@ IRRLICHT_LOGO = "img/adsdsa"
 DARKGDK_LOGO = "img/dark"
 R_LOGO = "img/rrrr"
 UNITY_LOGO = "img/asdds"
+
+class InstantiableMutableMapping(MutableMapping):
+	def __init__(self, *args, **kwargs):
+		self.__dict__.update(*args, **kwargs)
+ 
+
+	def __setitem__(self, key, value):
+		self.__dict__[key] = value
+ 
+
+	def __getitem__(self, key):
+		return self.__dict__[key]
+ 
+
+	def __delitem__(self, key):
+		del self.__dict__[key]
+ 
+
+	def __iter__(self):
+		return iter(self.__dict__)
+ 
+
+	def __len__(self):
+		return len(self.__dict__)
+ 
+
+	def __str__(self):
+		return str(self.__dict__)
+ 
+
+	def __repr__(self):
+		return '{}, D({})'.format(super(D, self).__repr__(), self.__dict__)
+
+class PortfolioItems(InstantiableMutableMapping):
+
+	def __init__(self, *args, **kwargs):
+		super().__init__(*args, **kwargs)
+
+	def get_main_portfolio_items(self):
+		filtered = PortfolioItems()
+
+		for key, val in self.__dict__.items():
+			if val.is_main_portfolio_item():
+				filtered[key] = val
+
+		return filtered 
+
+	def get_game_jam_portfolio_items(self):
+		filtered = PortfolioItems()
+
+		for key, val in self.__dict__.items():
+			if val.is_game_jam_entry_item():
+				filtered[key] = val
+
+		return filtered 
 
 class PortfolioItem:
 	def __init__(self, portfolio_type :str = "Main") -> None:
@@ -42,7 +98,7 @@ class PortfolioItem:
 	def is_game_jam_entry_item(self) -> bool:
 		return self.__portfolio_type__ == "Game Jam"
 
-portfolio_items = {}
+portfolio_items = PortfolioItems()
 portfolio_items["Kuma Engine"] = PortfolioItem()
 portfolio_items["Kuma Engine"].subtitle = "Current Project" 
 portfolio_items["Kuma Engine"].logo = "img/opengl-logo.png"

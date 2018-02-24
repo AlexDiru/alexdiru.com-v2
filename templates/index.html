@@ -1,4 +1,25 @@
 {% extends "bspage.html" %}
+
+{% macro show_portfolio_grid(filtered_portfolio_items) %}
+
+  {% for portfolio_name, portfolio_item in filtered_portfolio_items.items() %}
+    <div class="col-lg-3 col-md-6 text-center portfolio-item" 
+      onclick="window.location.href = 'portfolio-item/' + '{{ portfolio_name }}' + '.html'">
+      <div class="service-box mt-5 mx-auto">
+
+        {% if portfolio_item.images|length == 0 %}
+            <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
+        {% else %}
+            <img src="{{ url_for('static', filename=portfolio_item.get_portfolio_grid_image()) }}" width="200px" height="100px"/>
+        {% endif %}
+
+        <h3 class="mb-3">{{ portfolio_name }}</h3>
+        <p class="text-muted mb-0">{{ portfolio_item.shorttext }}</p>
+      </div>
+    </div>
+  {% endfor %}
+
+{% endmacro %}
   
 {% block scripts %}
 <style>
@@ -40,25 +61,7 @@
   <div class="container">
     <div class="row">
 
-    <!-- #TODO: Check if Jinja supports functions/macros -->
-      {% for portfolio_name, portfolio_item in portfolio_items.items() %}
-          {% if portfolio_item.is_main_portfolio_item() %}
-            <div class="col-lg-3 col-md-6 text-center portfolio-item" 
-            	onclick="window.location.href = 'portfolio-item/' + '{{ portfolio_name }}' + '.html'">
-              <div class="service-box mt-5 mx-auto">
-                
-                {% if portfolio_item.images|length == 0 %}
-                    <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
-                {% else %}
-                    <img src="{{ url_for('static', filename=portfolio_item.get_portfolio_grid_image()) }}" width="200px" height="100px"/>
-                {% endif %}
-
-                <h3 class="mb-3">{{ portfolio_name }}</h3>
-                <p class="text-muted mb-0">{{ portfolio_item.shorttext }}</p>
-              </div>
-            </div>
-          {% endif %}
-      {% endfor %}
+    {{ show_portfolio_grid(portfolio_items.get_main_portfolio_items()) }}
 
     </div>
   </div>
@@ -76,26 +79,7 @@
   <div class="container">
     <div class="row">
 
-
-    	<!-- TODO: Check if Jinja supports functions/macros -->
-      {% for portfolio_name, portfolio_item in portfolio_items.items() %}
-          {% if portfolio_item.is_game_jam_entry_item() %}
-            <div class="col-lg-3 col-md-6 text-center portfolio-item"
-            	onclick="window.location.href = 'portfolio-item/' + '{{ portfolio_name }}' + '.html'">
-              <div class="service-box mt-5 mx-auto">
-                
-                {% if portfolio_item.images|length == 0 %}
-                    <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
-                {% else %}
-                    <img src="{{ url_for('static', filename=portfolio_item.get_portfolio_grid_image()) }}" width="200px" height="100px"/>
-                {% endif %}
-
-                <h3 class="mb-3">{{ portfolio_name }}</h3>
-                <p class="text-muted mb-0">{{ portfolio_item.shorttext }}</p>
-              </div>
-            </div>
-          {% endif %}
-      {% endfor %}
+      {{ show_portfolio_grid(portfolio_items.get_game_jam_portfolio_items()) }}
 
     </div>
   </div>
