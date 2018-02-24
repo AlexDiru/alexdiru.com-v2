@@ -10,7 +10,7 @@
         {% if portfolio_item.images|length == 0 %}
             <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
         {% else %}
-            <img src="{{ url_for('static', filename=portfolio_item.get_portfolio_grid_image()) }}" width="200px" height="100px"/>
+            <img src="{{ url_for('static', filename=portfolio_item.get_portfolio_grid_image()) }}" class="portfolio-img" />
         {% endif %}
 
         <h3 class="mb-3">{{ portfolio_name }}</h3>
