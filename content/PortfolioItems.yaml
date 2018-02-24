@@ -37,7 +37,7 @@ Midnight Sun:
   sound with the navigation mesh (the predefined area of the both the AIs can walk on). Since most of the time the arrow will be shot at a wall or a roof of a building where the 
   NPC cannot reach, thus the position the AI would need to investigate would need to be projected to the nearest point on its navigation mesh. It was way harder to implement than 
   explain! And also researching OpenGL and the UE4 source code to work out the lighting algorithm UE uses to compute the amount of light hitting the player (because you need to be 
-  able to hide in the shadows!)"""
+  able to hide in the shadows!)
  Images:
   - "amaya1.png"
   - "amaya2.png"

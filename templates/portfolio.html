@@ -3,6 +3,7 @@
 {% block scripts %}
 <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='vendor/slick/slick.css') }}"/>
 <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='vendor/slick/slick-theme.css') }}"/>
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='vendor/slick-lightbox/slick-lightbox.min.css') }}"/>
 <style>
 	.slick-prev:before,
 	.slick-next:before
@@ -14,6 +15,33 @@
 	    height: 50%;
 	    width: 100%;
     	margin-bottom: -50px;
+	}
+
+	.image-source-link {
+		color: #98C3D1;
+	}
+
+	.mfp-with-zoom .mfp-container,
+	.mfp-with-zoom.mfp-bg {
+		opacity: 0;
+		-webkit-backface-visibility: hidden;
+		/* ideally, transition speed should match zoom duration */
+		-webkit-transition: all 0.3s ease-out; 
+		-moz-transition: all 0.3s ease-out; 
+		-o-transition: all 0.3s ease-out; 
+		transition: all 0.3s ease-out;
+	}
+
+	.mfp-with-zoom.mfp-ready .mfp-container {
+			opacity: 1;
+	}
+	.mfp-with-zoom.mfp-ready.mfp-bg {
+			opacity: 0.8;
+	}
+
+	.mfp-with-zoom.mfp-removing .mfp-container, 
+	.mfp-with-zoom.mfp-removing.mfp-bg {
+		opacity: 0;
 	}
 </style>
 {% endblock %}
@@ -29,14 +57,21 @@
 				<h3>{{ portfolio_item.subtitle }}</h3>
 				<p align="justify">{{ portfolio_item.content|safe }}</p>
 
-				<!-- Carousel -->
 				{% if portfolio_item.images|length > 0 %}
-				<div class="slider single-item">
-					{% for image in portfolio_item.get_images_for_jinja() %}
-				  		<div class="align-middle"><img src="{{url_for('static', filename=image) }}" style="max-width:100%;"/></div>
-				  	{% endfor %}
+				<div class="images">
+				  	<div class="row">
+						{% for image in portfolio_item.get_images_for_jinja() %}
+						    <div class="col-lg-6 col-md-12 text-center">
+						    	<div class="service-box mt-5 mx-auto">
+						      		<a href="{{url_for('static', filename=image) }}" target="_blank"><img src="{{url_for('static', filename=image) }}" style="width:100%"/></a>
+				      			</div>
+				    		</div>
+				  		{% endfor %}
+				  	</div>
 				</div>
 				{% endif %}
+
+
 
 			</div>
 		</div>
@@ -47,9 +82,10 @@
 
 {% block scriptsbottom %}
 <script type="text/javascript" src="{{url_for('static', filename='vendor/slick/slick.min.js') }}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='vendor/slick-lightbox/slick-lightbox.min.js') }}"></script>
 <script>
-	$(function(){
-		$('.single-item').slick();
-	});
+	$('.images').slickLightbox();
+
+
 </script>
 {% endblock %}
