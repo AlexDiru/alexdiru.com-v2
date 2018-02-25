@@ -3,14 +3,14 @@
 {% macro show_portfolio_grid(filtered_portfolio_items) %}
 
   {% for portfolio_name, portfolio_item in filtered_portfolio_items.items() %}
-    <div class="col-lg-3 col-md-6 text-center portfolio-item" 
+    <div class="col-lg-3 col-md-6 text-center portfolio-item"
       onclick="window.location.href = 'portfolio-item/' + '{{ portfolio_name }}' + '.html'">
       <div class="service-box mt-5 mx-auto">
 
         {% if portfolio_item.images|length == 0 %}
             <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
         {% else %}
-            <img src="{{ url_for('static', filename=portfolio_item.get_portfolio_grid_image()) }}" class="portfolio-img" />
+            <img src="{{ url_for('static', filename=portfolio_item.get_portfolio_grid_image()) }}" class="portfolio-img"/>
         {% endif %}
 
         <h3 class="mb-3">{{ portfolio_name }}</h3>
@@ -20,7 +20,7 @@
   {% endfor %}
 
 {% endmacro %}
-  
+
 {% block scripts %}
 <style>
 	.portfolio-item {

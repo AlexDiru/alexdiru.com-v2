@@ -7,9 +7,11 @@
 
 # TODO
 
- - Portfolio images maintain aspect ratio of original
+ - Default to logos if no screenshot
+ 
+ - Add Links button on portfolio page
 
- - More padding from the top in portfolio-items
+ - Fix Mare Imbrium Download
 
  - Finish adding info from old site
 

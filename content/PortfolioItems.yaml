@@ -1,10 +1,12 @@
 Kuma Engine:
+ Year: 2017
  SubTitle: Current Project
  Logo: OpenGL
  Short Text: Visual Novel Creator in OpenGL.
  Content: "This is a project to combine both a compiler and a game engine in OpenGL. The aim is to allow people to create visual novels similar to the Danganronpa series (which involve both 2D and 3D environments and minigames making it more complex than a standard visual novel)."
 
 Doom WAD Importer:
+ Year: 2017
  Logo: UE4
  Short Text: Import Doom levels into Unreal Engine.
  Content: "Imports floors, walls and doors of Doom levels into Unreal Engine using ear clipping polygon triangulation."
@@ -12,6 +14,7 @@ Doom WAD Importer:
   - doomwadue.jpg
 
 Facade:
+ Year: 2017
  Logo: UE4
  Short Text: A turn-based battle system in Unreal Engine.
  Content: "A prototype of a turn-based RPG similar to Persona, Pokemon or Final Fantasy. This project started off by me wondering how to implement a turn-based RPG/overworld state system in engines such as Unreal Engine or Unity (see blogposts <a href=\"http://alexdiru.blogspot.co.uk/2017/04/facade-turn-based-rpg-system-with.html\">here</a> and <a href=\"http://alexdiru.blogspot.co.uk/2017/04/unreal-engine-turn-based-rpg-design-2.html\">here</a> with my rambling)."
@@ -19,24 +22,30 @@ Facade:
   - "https://youtu.be/BiMoemDqiYs"
 
 99th Street:
+ Year: 2017
  SubTitle: "Released on itch.io"
  Logo: UE4
  Short Text: Prototype of a skating engine
  Content: "A prototype of a skating engine, with grinding, wallrides and a lack of skating animations. Made in Unreal Engine 4. Grinding uses splines and the game is fairly fun to play with a controller."
- Videos: 
+ Videos:
   - "https://youtu.be/0_wXn7VB8S8"
+ Images:
+  - 99thstreet01.jpg
+  - 99thstreet02.jpg
+  - 99thstreet03.jpg
  Links:
   itch.io: "https://alexdiru.itch.io/99th-street"
 
 Midnight Sun:
+ Year: 2016
  Logo: UE4
  Short Text: "Stealth game with artificial intelligence."
  Content: >
-  Stealth FPS game intended to be in the same style as the original Thief games. Written in UE4, I was quite proud of implementing noise arrows. The player can 
+  Stealth FPS game intended to be in the same style as the original Thief games. Written in UE4, I was quite proud of implementing noise arrows. The player can
   fire a noise arrow at any part of the map and it emits a noise, if the enemy is close enough then they will walk towards it. The extremely difficult part was integrating the noise
-  sound with the navigation mesh (the predefined area of the both the AIs can walk on). Since most of the time the arrow will be shot at a wall or a roof of a building where the 
-  NPC cannot reach, thus the position the AI would need to investigate would need to be projected to the nearest point on its navigation mesh. It was way harder to implement than 
-  explain! And also researching OpenGL and the UE4 source code to work out the lighting algorithm UE uses to compute the amount of light hitting the player (because you need to be 
+  sound with the navigation mesh (the predefined area of the both the AIs can walk on). Since most of the time the arrow will be shot at a wall or a roof of a building where the
+  NPC cannot reach, thus the position the AI would need to investigate would need to be projected to the nearest point on its navigation mesh. It was way harder to implement than
+  explain! And also researching OpenGL and the UE4 source code to work out the lighting algorithm UE uses to compute the amount of light hitting the player (because you need to be
   able to hide in the shadows!)
  Images:
   - "amaya1.png"
@@ -46,12 +55,13 @@ Midnight Sun:
   - "https://youtu.be/H9KKS5-yW60"
 
 Red Leaf:
+ Year: 2013
  SubTitle: "Released on Google Play Store and itch.io"
  Logo: LibGDX
  Short Text: Stealth game with artificial intelligence.
  Content: >
-  After getting an Android phone I found myself getting addicted to the rhythm games similar to Guitar Hero where you tap the notes as they fall down the screen. While I was doing 
-  some coursework for University which involved creating games for Android phones, I had the idea to create one of those rhythm games for one of my favourite bands, LOST. Obviously 
+  After getting an Android phone I found myself getting addicted to the rhythm games similar to Guitar Hero where you tap the notes as they fall down the screen. While I was doing
+  some coursework for University which involved creating games for Android phones, I had the idea to create one of those rhythm games for one of my favourite bands, LOST. Obviously
   the first hurdle would be to get permission to use the music.
  Images:
   - "lostresponse.png"
@@ -63,13 +73,14 @@ Red Leaf:
   "itch.io": "https://alexdiru.itch.io/red-leaf"
 
 Jet Set Reverse:
+ Year: 2014
  SubTitle: "Open Source"
  Logo: CSharp
  Short Text: "A texture modifier for a Dreamcast game."
  Content: >
-  This was an application I developed to allow texture changes in the game Jet Set Radio HD. Jet Set Radio HD was a HD port of a Dreamcast game released in 1999, this means that all 
-  the files used by the HD re-release are Dreamcast files. As far as I know, I am the first person to develop support for texture changes on this game. It involved a lot of trial and 
-  error as the game uses its own custom file formats lacking a specification (or even any info about them), also the use of Dreamcast textures is annoying as many tools that still 
+  This was an application I developed to allow texture changes in the game Jet Set Radio HD. Jet Set Radio HD was a HD port of a Dreamcast game released in 1999, this means that all
+  the files used by the HD re-release are Dreamcast files. As far as I know, I am the first person to develop support for texture changes on this game. It involved a lot of trial and
+  error as the game uses its own custom file formats lacking a specification (or even any info about them), also the use of Dreamcast textures is annoying as many tools that still
   remain on the internet (being that the Dreamcast existed pre-millenium).<br/>
   While developing the program, I made lots and lots of blog posts about hacking into the files:<br/>
   <a href="http://alexdiru.blogspot.co.uk/2013/12/reverse-engineering-jet-set-radio-hd.html">Blog 1</a><br/>
@@ -93,40 +104,43 @@ Jet Set Reverse:
   "Source Code" : "https://github.com/AlexDiru/jet-set-reverse"
 
 Electric Rain:
+ Year: 2013
  Short Text: "A 2D RPG with a battle system."
  Logo: LibGDX
  Content: >
-  Electric Rain was an RPG which I attempted to create using the Slick2D engine from Java. It has a turn based battle system in the vain of the Final Fantasy series, and supports 
-  types of attacks/spells such as ones which can have a single target and others which can have an area of effect and hit multiple targets. Attacks/spells don't neccessarily need 
-  to be targetted at enemies, healing spells are in place which can heal your own team. All of the data the game uses are stored in XML files and thus can be easily parsed and amended. 
+  Electric Rain was an RPG which I attempted to create using the Slick2D engine from Java. It has a turn based battle system in the vain of the Final Fantasy series, and supports
+  types of attacks/spells such as ones which can have a single target and others which can have an area of effect and hit multiple targets. Attacks/spells don't neccessarily need
+  to be targetted at enemies, healing spells are in place which can heal your own team. All of the data the game uses are stored in XML files and thus can be easily parsed and amended.
   The main game is reminescent of Pokemon - a top down view of the world with wild encounters found in grass.
  Images:
   - "er1.png"
   - "er2.png"
- Links: 
+ Links:
   Source Code: "https://github.com/AlexDiru/electric-rain"
 
 Neuron Warfare:
+ Year: 2011
  Short Text: "Strategy shooter in C++ using Irrlicht."
  Logo: Irrlicht
- Content: > 
-  Neuron Warfare was an open source game creating in C++ using Irrlicht. Originally I intended the project just to be demo to see if I could implement the A* algorithm. However, 
-  it has quickly increased beyond that. It's beginning to form into a turn based strategy game where you have a party of players who move across a map and must kill the ememies before 
+ Content: >
+  Neuron Warfare was an open source game creating in C++ using Irrlicht. Originally I intended the project just to be demo to see if I could implement the A* algorithm. However,
+  it has quickly increased beyond that. It's beginning to form into a turn based strategy game where you have a party of players who move across a map and must kill the ememies before
   they kill you.
- Images: 
+ Images:
   - "nw01.png"
-  - "nw02.png" 
+  - "nw02.png"
  Links:
   Source Code: "https://github.com/AlexDiru/NeuronWarfare"
 
 Barricade:
+ Year: 2008
  Short Text: "A 2.5D puzzle game using DarkGDK."
  Logo: DarkGDK
  Content: >
-  Barricade was a simple puzzle game I made for a competition in 2009. The prize for the winner was that the game's graphics were remade (by David Gervais), and as a awful artist 
-  myself that would mean I could have a decent looking game if I won. I had drafted up some not so great looking prototypes. The gameplay was simplistic yet it worked - it involved 
+  Barricade was a simple puzzle game I made for a competition in 2009. The prize for the winner was that the game's graphics were remade (by David Gervais), and as a awful artist
+  myself that would mean I could have a decent looking game if I won. I had drafted up some not so great looking prototypes. The gameplay was simplistic yet it worked - it involved
   navigated throughout a map to reach the end, however things were in your way such as boxes, locked 'doors' and spike pits. This game won the competition...<br/>
-  ...However, my game was the only entrant so I had to win! I felt bad for the organiser as lots of people said they would join in but they never did - though not a problem with me 
+  ...However, my game was the only entrant so I had to win! I felt bad for the organiser as lots of people said they would join in but they never did - though not a problem with me
   as I would finally have a finished game with decent graphics. To make the deadline, even though I knew there were no other entrants I still wanted to finish the game so I pulled a
   few all-nighters to get it done.
  Images:
@@ -136,11 +150,12 @@ Barricade:
   Download: "http://www.mediafire.com/?fq4a1n22n67329a"
 
 Jet Set Radio Air:
+ Year: 2009
  Short Text: "A skating game using DarkGDK"
  Logo: DarkGDK
  Content: >
-  Unfortunately this is one of the many projects I have lost the source code. Though 15 year old me would have probably written indecipherable code. The reason I stopped this project 
-  was mainly due to the spaghetti code this had become. Whenever I ran the game I would get an exception which I just couldn't find the fix to. I'm not sure if I knew about debugging 
+  Unfortunately this is one of the many projects I have lost the source code. Though 15 year old me would have probably written indecipherable code. The reason I stopped this project
+  was mainly due to the spaghetti code this had become. Whenever I ran the game I would get an exception which I just couldn't find the fix to. I'm not sure if I knew about debugging
   then - I must have done, because if not bug fixing would have been horrible. But I didn't know what version control was so there was no way I could revert to a previous build.<br/>
   Videos:</br>
   <a href="https://www.youtube.com/watch?v=WHSH2HgXZ9M">Video 1</a><br/>
@@ -169,20 +184,22 @@ Jet Set Radio Air:
   <a href="https://www.youtube.com/watch?v=b1Gy0ItT8eU">Video 24</a><br/>
 
 rsurfer:
+ Year: 2016
  Short Text: "An R package for MRI data"
  Logo: R
  Links:
   Source Code: "https://github.com/AlexDiru/rsurfer"
 
 How To Build A Planet:
+ Year: 2017
  Portfolio Type: Game Jam
  Short Text: "Ludum Dare 38"
  Logo: Unity
  Content: >
-  Game made for Ludum Dare game jam 38, the theme was 'Small World'. You start off on an asteroid and you must place rockets at the edge to thrust it off into space and connecting to 
+  Game made for Ludum Dare game jam 38, the theme was 'Small World'. You start off on an asteroid and you must place rockets at the edge to thrust it off into space and connecting to
   other asteroids to increase the size of your planet and gain more resources.<br/>
-  Two friends and I made this in Unity over a weekend: John Roberts (<a href="http://www.twitter.com/Thingus49">@Thingus49</a>) and Timothy Threadgold (<a 
-  href="http://www.twitter.com/TimThreadgold">@TimThreadgold</a>), I don't think the resolution scaling works too well - we assumed Unity did everything and then we were too burned out on 
+  Two friends and I made this in Unity over a weekend: John Roberts (<a href="http://www.twitter.com/Thingus49">@Thingus49</a>) and Timothy Threadgold (<a
+  href="http://www.twitter.com/TimThreadgold">@TimThreadgold</a>), I don't think the resolution scaling works too well - we assumed Unity did everything and then we were too burned out on
   the Sunday night to fix it.
  Images:
   - "asteroid1.png"
@@ -190,13 +207,14 @@ How To Build A Planet:
   "itch.io": "https://alexdiru.itch.io/how-to-build-a-planet"
 
 Cabin Commander:
+ Year: 2016
  Portfolio Type: Game Jam
  Short Text: "Ludum Dare 37"
  Logo: Unity
  Content: >
-  Game made for Ludum Dare game jam 37, the theme was 'One Room'. You play the role of a commander locked in a cabin on a battlefield. You are able to control your tanks from the commander 
+  Game made for Ludum Dare game jam 37, the theme was 'One Room'. You play the role of a commander locked in a cabin on a battlefield. You are able to control your tanks from the commander
   table in your cabin and can look outside your cabin onto the battlefield, but you can never leave your cabin.<br/>
-  Two friends and I made this in Unity over a weekend: John Roberts (<a href="http://www.twitter.com/Thingus49">@Thingus49</a>) and Timothy Threadgold (<a 
+  Two friends and I made this in Unity over a weekend: John Roberts (<a href="http://www.twitter.com/Thingus49">@Thingus49</a>) and Timothy Threadgold (<a
   href="http://www.twitter.com/TimThreadgold">@TimThreadgold</a>).
  Images:
   - "cabin1.png"
@@ -204,4 +222,40 @@ Cabin Commander:
   "itch.io" : "https://alexdiru.itch.io/cabin-commander"
 
 Omega:
+ Year: 2016
  Portfolio Type: Game Jam
+ Short Text: PROCJAM 2016
+ Logo: UE4
+ Content: >
+  Procedurally generated heightmap I made for a game jam (PROCJAM 2016), did not implement as much gameplay as I would have liked as building the heightmap had to be done by creating the
+  vertices and winding them manually (rather than edit a landscape heightmap at runtime). Perlin Noise was used for the heightmap.
+ Images:
+  - omega1.jpg
+  - omega2.jpg
+  - omega3.jpg
+  - omega4.jpg
+  - omega5.jpg
+ Links:
+  "itch.io" : "https://alexdiru.itch.io/omega"
+
+Mare Imbrium:
+ Year: 2013
+ Portfolio Type: Game Jam
+ Short Text: Ludum Dare 28
+ Logo: LibGDX
+ Content: >
+  Ludum Dare is a somewhat frequent competition where the aim is to make a game over a weekend in 48 hours. The game is then uploaded to Ludum Dare's website and the games are voted on and
+  a winner is declared. After a while, a game jam branched off where there was no competition, just to make a game in 72 hours. My entry to the "not-competition" was a game called Mare Imbrium<br/><br/>
+  Mare Imbrium is rogue-like game based on DoomRL (even has some sprites taken from it...) Where you play as a schoolgirl and have to save Mars from killer robots by shooting them - not the
+  most usual combination. This was entered into the 28th Ludum Dare where the theme "You Only Get One", which is quite a vague theme in that you can generally apply it to pretty much any
+  concept. Thus applying it to a rogue-like and it becomes You Only Get One Life - when you die you start from the beginning of the game. There are only three levels, I forwent having
+  procedural map generation because I wanted actual game mechanics and I had a feeling if I went for procedural I wouldn't end up with much of a game.<br/><br/>
+  The first and second levels are pretty easy - make sure to stock up on health! The third level is pretty difficult, a good tactic seems to be to try to get the bigger robots to shoot the
+  smaller 'cannon fodder'. The game is very flexible, majority of things (items, enemies, maps, weapons) are read from CSV files so it's very easy to change details on the fly.<br/><br/>
+  Source code is on GitHub. Bit messy due to lack of time!
+ Images:
+  - mi01.png
+  - mi02.png
+ Links:
+  itch.io: "https://github.com/AlexDiru/mare-imbrium-ld28"
+  Download: "https://www.dropbox.com/s/c80wevbxew7wbd1/Mare%20Imbrium.zip"

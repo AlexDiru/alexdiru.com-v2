@@ -85,6 +85,11 @@ img::-moz-selection {
   max-height: 100px;
 }
 
+.gallery-img {
+  max-width: 300px;
+  max-height: 150px;
+}
+
 #mainNav {
   border-bottom: 1px solid rgba(33, 37, 41, 0.1);
   background-color: #fff;
@@ -296,6 +301,14 @@ header.masthead p {
   border: none;
   border-radius: 300px;
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.portfolio-item:hover .portfolio-img {
+  opacity: 0.5;
+}
+
+.portfolio-item:hover .fa-diamond {
+  opacity: 0.5;
 }
 
 .btn-xl {

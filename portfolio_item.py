@@ -11,6 +11,7 @@ class PortfolioItem:
 		self.videos = [] # type: List[str]
 		self.links = {} # type: Dict[str, str]
 		self.portfolio_grid_image_index = 0
+		self.year = 0
 		self.__portfolio_type__ = portfolio_type
 
 	def get_image_filename(self, index: int) -> str:
@@ -60,5 +61,7 @@ class PortfolioItem:
 		if "Links" in content:
 			for link_name, link_url in content["Links"].items():
 				portfolio_item.links[link_name] = link_url
+		if "Year" in content:
+			portfolio_item.year = int(content["Year"])
 
 		return portfolio_item
