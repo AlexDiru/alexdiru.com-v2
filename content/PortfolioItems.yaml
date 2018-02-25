@@ -18,6 +18,9 @@ Facade:
  Logo: UE4
  Short Text: A turn-based battle system in Unreal Engine.
  Content: "A prototype of a turn-based RPG similar to Persona, Pokemon or Final Fantasy. This project started off by me wondering how to implement a turn-based RPG/overworld state system in engines such as Unreal Engine or Unity (see blogposts <a href=\"http://alexdiru.blogspot.co.uk/2017/04/facade-turn-based-rpg-system-with.html\">here</a> and <a href=\"http://alexdiru.blogspot.co.uk/2017/04/unreal-engine-turn-based-rpg-design-2.html\">here</a> with my rambling)."
+ Images:
+   - facade01.jpg
+   - facade02.jpg
  Videos:
   - "https://youtu.be/BiMoemDqiYs"
 
@@ -259,3 +262,58 @@ Mare Imbrium:
  Links:
   itch.io: "https://github.com/AlexDiru/mare-imbrium-ld28"
   Download: "https://www.dropbox.com/s/c80wevbxew7wbd1/Mare%20Imbrium.zip"
+
+Genetic Life Simulator:
+ Year: 2014
+ Portfolio Type: University
+ Short Text: Final Year Project
+ Logo: Java
+ Content: >
+  This was the topic I chose for my Final Year Project. Previously, in second year, for coursework, I had already made a life simulator although that was significantly more basic than this project.
+  This project would use Genetic Programming in order to allow the life forms to start with random behaviour and evolve over generations to adapt to the environment and be able to survive longer.
+  I used the Java library, JGAP, to handle the Genetic Programming side of the project. LibGDX was used to handle the rendering of the simulation world. And Java's Swing API was used to build the
+  GUI for the project.
+ Links:
+  Source Code: "https://github.com/AlexDiru/artificial-life-simulator-genetic-algorithm"
+
+Critical Error:
+  Year: 2013
+  Portfolio Type: University
+  Short Text: Lunar Lander-esque Android game
+  Logo: Java
+  Content: >
+   This was the coursework for my Java module in second year the aim of which was to implement a game in the vain of Lunar Lander. Annoyingly I dislike the game Lunar Lander so this coursework would
+   have been way more fun had I been in the previous year as they asked to implement a version of Breakout. All my game was was the basic Lunar Lander, the only difference was that after each level
+   you earned money which could be used to buy upgrades such as more fuel, additional lives and more money per level completed.
+  Images:
+    - ce01.png
+  Links:
+    Source Code: "https://github.com/AlexDiru/critical-error"
+
+Esper Compiler:
+  Year: 2012
+  Portfolio Type: University
+  Short Text: Compiler with optimisation techniques
+  Logo: Java
+  Content: >
+   An assignment in the second year of University for the Compilers module was to create a compiler which is capable of division by zero. An easy way to complete this assignment would be to create a
+   simple calculator. I chose to use this assignment to create my own (basic) programming language. The programming language I created is titled Esper and takes influence from LISP in that it adopts
+   the prefix notation. The target language it produces is C and when compiled the C code compiles into a valid program in which division by zero can be handled.<br/><br/>
+   This compiler (as well as the report I wrote) resulted in a grade of 100% for the coursework, since I had implemented all of the features (albeit basic) of a compiler: Lexical Analysis, Parse Tree
+   Generation, Optimisation and Code Generation. I used the Compiler Generator ANTLR, to help build the lexical analsyer and the parser for the compiler. The parser provided by ANTLR only provided very
+   basic functionality so I had to spend a lot of time getting it to have the functionality I required. The source code for the project is available on my GitHub account here.
+  Links:
+   Source Code: "https://github.com/AlexDiru/esper-compiler-final"
+
+Artificial Life Simulator:
+  Year: 2012
+  Portfolio Type: University
+  Short Text: Swing GUI
+  Logo: Java
+  Content: >
+   This project was the first piece of coursework for my Java module in Second Year. It involved using the Swing GUI to create a simulation where artificial life interact with a world. The big downside for this project was having to use Swing due to the fact we weren't allowed to use any GUI builders and therefore had to manually code the GUI, and also rendering the life form's world in Swing meant that they had to be JLabels with images, and thus updating them often (multiple times a second) was very slow.<br/><br/>
+   The simulation contained multiple types of life forms, each with different behaviour. There was the herbivore: which ate plants in the map. The carnivore: which ate herbivores. The nestbuilder: which ate plants and was able to build a defensive nest to protect itself from carnivores. And the ghost which was able to walk through the obstacles. Another highlight of the project was using a clustering algorithm to generate different types of landscape (though this didn't affect the simulation, only its visual appearance).<br/><br/>
+   This project and its related report gave me a mark of 90%
+  Images:
+   - ls01.png
+   - ls02.png

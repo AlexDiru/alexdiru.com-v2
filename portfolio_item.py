@@ -29,6 +29,9 @@ class PortfolioItem:
 	def is_game_jam_entry_item(self) -> bool:
 		return self.__portfolio_type__ == "Game Jam"
 
+	def is_university_portfolio_item(self) -> bool:
+		return self.__portfolio_type__ == "University"
+
 	@staticmethod
 	def from_dict_entry(title, content):
 		portfolio_type = "Main"
