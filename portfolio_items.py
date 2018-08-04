@@ -58,6 +58,9 @@ class PortfolioItems(InstantiableMutableMapping):
 	def get_university_portfolio_items(self):
 		return self._filter_portfolio_items(lambda x: x.is_university_portfolio_item())
 
+	def get_phd_portfolio_items(self):
+		return self._filter_portfolio_items(lambda x: x.is_phd_portfolio_item())
+
 	@staticmethod
 	def from_yaml(yaml_text: str):
 		yaml_data = yaml.load(yaml_text)

@@ -55,7 +55,7 @@ section {
 }
 
 .section-heading {
-  margin-top: 0;
+  margin-top: 10px;
 }
 
 ::-moz-selection {
@@ -83,6 +83,11 @@ img::-moz-selection {
 .portfolio-img {
   max-width: 200px;
   max-height: 100px;
+}
+
+.portfolio-thesis-img {
+  max-width: 800px;
+  max-height: 400px;
 }
 
 .gallery-img {
@@ -304,6 +309,10 @@ header.masthead p {
 }
 
 .portfolio-item:hover .portfolio-img {
+  opacity: 0.5;
+}
+
+.portfolio-item:hover .portfolio-thesis-img {
   opacity: 0.5;
 }
 

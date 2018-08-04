@@ -1,22 +1,26 @@
 {% extends "bspage.html" %}
 
-{% macro show_portfolio_grid(filtered_portfolio_items) %}
-
-  {% for portfolio_name, portfolio_item in filtered_portfolio_items.items() %}
+{% macro show_portfolio_item(portfolio_name, portfolio_image, portfolio_shorttext, image_filename) %}
     <div class="col-lg-3 col-md-6 text-center portfolio-item"
       onclick="window.location.href = 'portfolio-item/' + '{{ portfolio_name }}' + '.html'">
       <div class="service-box mt-5 mx-auto">
 
-        {% if portfolio_item.images|length == 0 %}
+        {% if portfolio_image == "" %}
             <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
         {% else %}
-            <img src="{{ url_for('static', filename=portfolio_item.get_portfolio_grid_image()) }}" class="portfolio-img"/>
+            <img src="{{ url_for('static', filename=portfolio_image) }}" class="portfolio-img"/>
         {% endif %}
 
         <h3 class="mb-3">{{ portfolio_name }}</h3>
-        <p class="text-muted mb-0">{{ portfolio_item.shorttext }}</p>
+        <p class="text-muted mb-0">{{ portfolio_shorttext }}</p>
       </div>
     </div>
+{% endmacro %}
+
+{% macro show_portfolio_grid(filtered_portfolio_items) %}
+
+  {% for portfolio_name, portfolio_item in filtered_portfolio_items.items() %}
+      {{ show_portfolio_item(portfolio_name, portfolio_item.get_portfolio_grid_image(), portfolio_item.shorttext) }}
   {% endfor %}
 
 {% endmacro %}
@@ -59,7 +63,7 @@
     <div class="row">
       <div class="col-lg-10 mx-auto">
         <h1 class="text-uppercase">
-          <strong>Alexander Spedding</strong><br/>
+          <strong>Alexander Spedding, PhD</strong><br/>
           Software Engineer
         </h1>
         <hr>
@@ -77,6 +81,27 @@
 {{ show_portfolio_section("Game Jam Entries", "game-jams", portfolio_items.get_game_jam_portfolio_items()) }}
 
 {{ show_portfolio_section("University Projects", "university-projects", portfolio_items.get_university_portfolio_items()) }}
+
+<section id="phd-thesis">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading">PhD Thesis</h2>
+        <hr class="my-4">
+      </div>
+    </div>
+  </div>
+  <div>
+  <div class="row justify-content-center">
+    <div class="col-lg-8 col-md-6 col-sm-8 text-center portfolio-item"
+      onclick="window.location.href = 'https://github.com/AlexDiru/my-phd-thesis/blob/master/AlexSpeddingThesisSealed-by-Examiners-for%20Binding-23-07-2018.pdf'">
+      <div class="mt-5 mx-auto">
+            <img src="{{ url_for('static', filename='img/portfolio/thesis-cover.png') }}" class="portfolio-thesis-img"/>
+            <h3 class="mb-3">A Data Mining Approach for Automated Classification of Alzheimer's Disease</h3>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="external-links">
   <div class="container">

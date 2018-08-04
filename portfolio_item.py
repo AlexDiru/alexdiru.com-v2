@@ -18,10 +18,12 @@ class PortfolioItem:
 		return "img/portfolio/" + self.images[index]
 
 	def get_portfolio_grid_image(self) -> str:
+		if len(self.images) == 0:
+			return ""
 		return self.get_image_filename(self.portfolio_grid_image_index)
 
 	def get_images_for_jinja(self) -> Iterable[str]:
-		return map(lambda image: "img/portfolio/" + image, self.images)
+		return list(map(lambda image: "img/portfolio/" + image, self.images))
 
 	def is_main_portfolio_item(self) -> bool:
 		return self.__portfolio_type__ == "Main"
@@ -31,6 +33,9 @@ class PortfolioItem:
 
 	def is_university_portfolio_item(self) -> bool:
 		return self.__portfolio_type__ == "University"
+
+	def is_phd_portfolio_item(self) -> bool:
+		return self.__portfolio_type__ == "PhD"
 
 	@staticmethod
 	def from_dict_entry(title, content):
