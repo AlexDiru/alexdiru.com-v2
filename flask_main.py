@@ -5,6 +5,7 @@ from flask import Markup
 from typing import Iterable, List, Dict
 
 from portfolio_items import PortfolioItems
+from bibliography_entries import BibliographyEntries
 
 app = Flask(__name__)
 
@@ -17,6 +18,7 @@ R_LOGO = "img/rrrr"
 UNITY_LOGO = "img/asdds"
 
 portfolio_items = PortfolioItems.from_yaml(open("content/PortfolioItems.yaml"))
+bibliography_entries = BibliographyEntries.from_yaml(open("content/Writing.yaml"))
 
 @app.route('/portfolio-item/<string:game_title>.html')
 def render_game(game_title :str) -> str:
@@ -27,6 +29,10 @@ def render_game(game_title :str) -> str:
 @app.route('/')
 def site_index() -> str:
 	return render_template('index.html', portfolio_items=portfolio_items)
+
+@app.route('/writing.html')
+def render_writing() -> str:
+	return render_template('writing.html', bibliography_entries=bibliography_entries)
 
 #@app.route('/')
 #def site_index() -> str:

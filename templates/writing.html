@@ -1,0 +1,73 @@
+{% extends "bspage.html" %}
+
+{% macro show_bibliography_row(bibliography_entry) %}
+    <div class="row">
+		<div class="col-4">
+			{{ bibliography_entry.title }}
+		</div>
+		<div class="col-3">
+			{{ bibliography_entry.genre }}
+		</div>
+		<div class="col-1">
+			{{ bibliography_entry.year }}
+		</div>
+		<div class="col-2">
+			{{ bibliography_entry.word_count }}
+		</div>
+		<div class="col-2">
+			{% if bibliography_entry.links|length > 0 %}
+				{% for link_name, link_url in bibliography_entry.links.items() %}
+					<a href="{{link_url}}">Read on {{link_name}}</a>
+				{% endfor %}
+			{% else %}
+				{{bibliography_entry.status}}
+			{% endif %}
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro show_bibliography_header() %}
+	<div class="row border-bottom">
+		<div class="col-4">
+			Title
+		</div>
+		<div class="col-3">
+			Genre
+		</div>
+		<div class="col-1">
+			Year
+		</div>
+		<div class="col-2">
+			Word Count
+		</div>
+		<div class="col-2">
+			Links
+		</div>
+	</div>
+{% endmacro %}
+
+
+{% block content %}
+
+<section id="portfolio-item" style="padding-top:6rem;">
+	<div class="container">	
+		<h3>Novels</h3>
+
+	  {{ show_bibliography_header() }}
+	  {% for bibliography_entry_name, bibliography_entry in bibliography_entries.get_novels().items() %}
+	      {{ show_bibliography_row(bibliography_entry) }}
+	  {% endfor %}
+	</div>
+
+	<br/><br/>
+
+	<div class="container">	
+		<h3>Short Stories</h3>
+
+	  {{ show_bibliography_header() }}
+	  {% for bibliography_entry_name, bibliography_entry in bibliography_entries.get_short_stories().items() %}
+	      {{ show_bibliography_row(bibliography_entry) }}
+	  {% endfor %}
+	</div>
+</section>
+{% endblock %}
