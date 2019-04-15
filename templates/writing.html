@@ -17,7 +17,7 @@
 		<div class="col-2">
 			{% if bibliography_entry.links|length > 0 %}
 				{% for link_name, link_url in bibliography_entry.links.items() %}
-					<a href="{{link_url}}">Read on {{link_name}}</a>
+					<a href="{{link_url}}">{{link_name}}</a>
 				{% endfor %}
 			{% else %}
 				{{bibliography_entry.status}}
@@ -68,6 +68,12 @@
 	  {% for bibliography_entry_name, bibliography_entry in bibliography_entries.get_short_stories().items() %}
 	      {{ show_bibliography_row(bibliography_entry) }}
 	  {% endfor %}
+	</div>
+
+	<br/><br/>
+
+	<div class="container">
+		<p> ✝ indicates a submission currently waiting to be accepted or rejected</p>
 	</div>
 </section>
 {% endblock %}

@@ -88,6 +88,8 @@ img::-moz-selection {
 .portfolio-thesis-img {
   max-width: 800px;
   max-height: 400px;
+  box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.45);
+  margin-bottom: 20px;
 }
 
 .gallery-img {
@@ -184,7 +186,7 @@ img::-moz-selection {
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 56px);
-  background-image: url("../img/header.jpg");
+  background-color: #000000;
   background-position: center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -213,9 +215,8 @@ header.masthead p {
 
 @media (min-width: 992px) {
   header.masthead {
-    height: 100vh;
-    min-height: 650px;
-    padding-top: 0;
+    min-height: 400px;
+    padding-top: 75px;
     padding-bottom: 0;
   }
   header.masthead h1 {

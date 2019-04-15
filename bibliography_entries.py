@@ -29,7 +29,10 @@ class BibliographyEntries(InstantiableMutableMapping):
 		yaml_data = yaml.load(yaml_text)
 		bibliography_entries = BibliographyEntries()
 
-		for title, content in yaml_data.items():
+		items = list(yaml_data.items())
+		items.reverse()
+
+		for title, content in items:
 			bibliography_entries[title] = BibliographyEntry.from_dict_entry(title, content)
 
 		return bibliography_entries
