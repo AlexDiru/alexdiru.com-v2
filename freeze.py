@@ -2,7 +2,6 @@ from flask_frozen import Freezer
 from flask_main import app, portfolio_items
 
 app.config['FREEZER_RELATIVE_URLS'] = True
-#app.config['FREEZER_BASE_URL'] = "file:///Users/alex/Desktop/alexdiru/build/"
 
 freezer = Freezer(app)
 
